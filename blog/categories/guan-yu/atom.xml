@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: 关于 | My Octopress Blog]]></title>
+  <title><![CDATA[Category: 关于 | Bryton's Blog]]></title>
   <link href="http://BrytonLee.github.io/blog/categories/guan-yu/atom.xml" rel="self"/>
   <link href="http://BrytonLee.github.io/"/>
-  <updated>2013-08-02T19:12:40+08:00</updated>
+  <updated>2013-08-02T19:35:01+08:00</updated>
   <id>http://BrytonLee.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Bryton Lee]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
