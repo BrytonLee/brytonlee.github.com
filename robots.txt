@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://BrytonLee.github.io/sitemap.xml 
