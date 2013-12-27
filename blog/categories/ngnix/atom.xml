@@ -1,98 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>Bryton's Blog</title>
-  <meta name="author" content="Bryton Lee">
-
-  
-  <meta name="description" content="我为什么要再谈KeepAlive 申请的域名到现在，除了一篇开篇博文到目前为止还没有一篇正式的文章。最近工作中遇到一个问题，想把它记录下来，场景是这样的： 从上图可以看出，用户通过Client访问的是LVS的VIP， VIP后端挂载的RealServer是Nginx服务器。 &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://BrytonLee.github.io">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Bryton's Blog" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Bryton's Blog</a></h1>
-  
-    <h2>Bryton Lee 的技术博客</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:BrytonLee.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[Category: ngnix | Bryton's Blog]]></title>
+  <link href="http://BrytonLee.github.io/blog/categories/ngnix/atom.xml" rel="self"/>
+  <link href="http://BrytonLee.github.io/"/>
+  <updated>2013-12-27T22:22:32+08:00</updated>
+  <id>http://BrytonLee.github.io/</id>
+  <author>
+    <name><![CDATA[Bryton Lee]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2013/12/27/keepalive/">再谈KeepAlive</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2013-12-27T14:19:00+08:00" pubdate data-updated="true">Dec 27<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>我为什么要再谈KeepAlive</h2>
+  <entry>
+    <title type="html"><![CDATA[再谈KeepAlive]]></title>
+    <link href="http://BrytonLee.github.io/blog/2013/12/27/keepalive/"/>
+    <updated>2013-12-27T14:19:00+08:00</updated>
+    <id>http://BrytonLee.github.io/blog/2013/12/27/keepalive</id>
+    <content type="html"><![CDATA[<h2>我为什么要再谈KeepAlive</h2>
 
 <p>申请的域名到现在，除了一篇开篇博文到目前为止还没有一篇正式的文章。最近工作中遇到一个问题，想把它记录下来，场景是这样的：</p>
 
@@ -194,139 +120,7 @@ off表示关闭
 <p><a href="http://nginx.org/en/docs/http/ngx_http_core_module.html">http://nginx.org/en/docs/http/ngx_http_core_module.html</a></p>
 
 <p>Nginx Source code: <a href="https://github.com/alibaba/tengine">https://github.com/alibaba/tengine</a></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/08/02/first-post/">记录技术点滴，积累铸就高度</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-02T16:17:00+08:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>记录技术点滴</h2>
-
-<p>很多时候想把自己在平常工作，学习中碰到的技术，遇到的难题，总结的解决方案写下来。在我的环境当中，我算是比较喜欢分享的，分享到自己都感觉到不好意思，可能是技术不够严谨，也可能是技术的分享确实乏味，有些可能跟工作没有直接关系。所以没能继续，总结得也不够多。我看到很多技术上很好的人他们乐于分享，无论是中国的还是外国的。不奢望我总结的内容能够有他们的高度，能有多少的读者，但是我还是希望能把自己的一些总结或者心得写下来，哪怕自己查阅也好。</p>
-
-<h2>积累铸就高度</h2>
-
-<p>每天上班下班，每天看书学习，也没看到自己的技术又多大的进步。我觉得其实技术和人的性格有类似性，虽然都是从事的IT行业，各个人的技术特长还是不一样的。虽然我知道自己的技术不怎么样，但是从我做过的技术分享来看，有些挺不错的效果。有时分享的内容可能就是听众百思不得其解的一个问题，有时分享的内容，尽管不是很严谨，内容也比较虚，但还是有听众会觉得不错。更好的是分享能促进自己对于问题的理解,交到志同道合的朋友！这是我觉得有必要开博的重要原因。</p>
-
-<h2>对本博客的要求</h2>
-
-<p>我自己其实也在其他好的网站上申请过博客空间，写过一两篇文章，但是都没有坚持下来，久而久之也不知道自己有几个博客。挺遗憾的。这次重新开始，没有选择在其他网站的blog上继续，一来是同事手上刚好有一台机器资源，尽管现在还没有确定能不能完全长期使用，所以为了保证博客的可用性，我先在github上做。然后花了一点时间在godaddy.net上申请了一个两年的域名，花了差不多170元RMB。有人说花钱的东西会心痛，会心痛就能坚持，希望如此。</p>
-
-<p>这次对自己的要求是在这两年的域名有效期坚持写不少于8篇技术性的文章。加油！</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2013/12/27/keepalive/">再谈KeepAlive</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/08/02/first-post/">记录技术点滴，积累铸就高度</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  
-  <a href="https://github.com/brytonlee">@brytonlee</a> on GitHub
-  
-  <script type="text/javascript">
-    $(document).ready(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'brytonlee',
-            count: 5,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Bryton Lee -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
+</feed>
