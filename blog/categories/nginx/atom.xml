@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: ngnix | Bryton's Blog]]></title>
-  <link href="http://BrytonLee.github.io/blog/categories/ngnix/atom.xml" rel="self"/>
+  <title><![CDATA[Category: nginx | Bryton's Blog]]></title>
+  <link href="http://BrytonLee.github.io/blog/categories/nginx/atom.xml" rel="self"/>
   <link href="http://BrytonLee.github.io/"/>
-  <updated>2013-12-27T22:22:32+08:00</updated>
+  <updated>2014-02-10T23:39:24+08:00</updated>
   <id>http://BrytonLee.github.io/</id>
   <author>
     <name><![CDATA[Bryton Lee]]></name>
