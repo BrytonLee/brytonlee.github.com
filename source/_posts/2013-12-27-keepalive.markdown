@@ -3,7 +3,7 @@ layout: post
 title: "再谈KeepAlive"
 date: 2013-12-27 14:19
 comments: true
-categories: TCP keepAlive HTTP ngnix LVS F5
+categories: TCP keepAlive HTTP nginx LVS F5
 ---
 
 我为什么要再谈KeepAlive
