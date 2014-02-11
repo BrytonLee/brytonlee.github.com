@@ -123,7 +123,7 @@ C语言函数ngx_http_stylecombine_body_filter反汇编之后的第一条指令�
 
 当我调试到此处的时候，发现ngx_http_get_module_ctx其实是一个宏，这个宏的定义如下：
 
-    #define ngx_http_get_module_ctx(r, module)  \(\r\)->ctx[module.ctx_index]
+    #define ngx_http_get_module_ctx(r, module)  (r)->ctx[module.ctx_index]
 了解C语言的同学一定知道ctx是r的一个成员，对于汇编来说其实就是一个地址，
 
     mov    0x10(%rdi),%rdx   
@@ -140,15 +140,15 @@ C语言函数ngx_http_stylecombine_body_filter反汇编之后的第一条指令�
 
     mov    0x234c76(%rip),%rax        # 0x6bc820 <ngx_http_stylecombine_filter_module>
     
-有了ctx的地址(保存在rdx)，和索引值(保存在rax)，接下来就是去取索引的内容：
+有了r->ctx的地址(保存在rdx)，和索引值module.ctx_index(保存在rax)，接下来就是去取索引的内容：
 
     mov    (%rdx,%rax,8),%rax
     ;rdx + rax * 8
     ;x86_64的地址长度为8个字节。
 
-到此为止知道ngx_http_stylecombine_body_filter+35指令之前rax寄存器保存内容的来历。就是说(r)->ctx[module.ctx_index]确实是为0, if语句的跳转没有出错。
+到此为止知道ngx_http_stylecombine_body_filter+35指令之前rax寄存器保存内容的来历。就是说\(r\)->ctx[module.ctx_index]确实是为0, if语句的跳转没有出错。
 
-等等，貌似少了什么东西，**为什么在前面通过gdb打印ctx的值不为0，按照C语言的语句ctx = ngx_http_get_module_ctx(r, ngx_http_stylecombine_filter_module);ctx应该要是0才对!?** 我认为这是由于gcc对C语言的宏进行展开之后，通过数据流分析和优化能发现if语句里面要判断的值其实是(r)->ctx[module.ctx_index],不是局部变量ctx，从反汇编的结果也可以看出在ngx_http_stylecombine_body_filter+35处的test语句之前并没有ctx的赋值操作,如果ngx_http_get_module_ctx是一个函数而不是一个宏，ctx应该会是0(前提是编译器没有过度优化)。
+等等，貌似少了什么东西，**为什么在前面通过gdb打印ctx的值不为0，按照C语言的语句ctx = ngx_http_get_module_ctx(r, ngx_http_stylecombine_filter_module);ctx应该要是0才对!?** 我认为这是由于gcc对C语言的宏进行展开之后，通过数据流分析和优化能发现if语句里面要判断的值其实是\(r\)->ctx[module.ctx_index],不是局部变量ctx，从反汇编的结果也可以看出在ngx_http_stylecombine_body_filter+35处的test语句之前并没有ctx的赋值操作,如果ngx_http_get_module_ctx是一个函数而不是一个宏，ctx应该会是0(前提是编译器没有过度优化)。
 
 这就能解释ctx为什么不为0,gdb打印出来ctx的值实际上是一个未初始化的栈上的值，也就是一个野值(0x989680)，当天调试较晚困了没有发现。同时也解释了我前面说从ngx_http_stylecombine_body_filter+20开始的三条mov指令对应到ctx = ngx_http_get_module_ctx(r, ngx_http_stylecombine_filter_module)的说法其实是不全对的，因为ctx的赋值操作没有在这3条指令中。(*ps:欢迎大家和我交流^-^*)
 
