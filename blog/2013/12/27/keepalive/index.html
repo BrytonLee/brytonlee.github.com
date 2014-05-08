@@ -109,7 +109,7 @@
 
 <h2>为什么要有KeepAlive？</h2>
 
-<p>在谈KeepAlive之前，我们先来了解下简单TCP知识(知识很简单，高手直接忽略)。首先要明确的是在TCP层是没有“请求”一说的，经常听到在TCP层发送一个请求，这种说法是错误的。TCP是一种通信的方式，“请求”一词是事务上的概念，HTTP协议是一种事务协议，如果说发送一个HTTP请求，这种说法就没有问题。也经常听到面试官反馈有些面试运维的同学，基本的TCP三次握手的概念不清楚， 面试官问TCP是如何建立链接，面试者上来就说，假如我是客服端我发送一个请求给服务端，服务端发送一个请求给我。。。这种一听就知道对TCP基本概念不清楚。下面是我通过wireshark抓取的一个TCP建立握手的过程。（命令行基本上用TCPdump,后面我们还会用这张图说明问题）:</p>
+<p>在谈KeepAlive之前，我们先来了解下简单TCP知识(知识很简单，高手直接忽略)。首先要明确的是在TCP层是没有“请求”一说的，经常听到在TCP层发送一个请求，这种说法是错误的。TCP是一种通信的方式，“请求”一词是事务上的概念，HTTP协议是一种事务协议，如果说发送一个HTTP请求，这种说法就没有问题。也经常听到面试官反馈有些面试运维的同学，基本的TCP三次握手的概念不清楚， 面试官问TCP是如何建立链接，面试者上来就说，假如我是客户端我发送一个请求给服务端，服务端发送一个请求给我。。。这种一听就知道对TCP基本概念不清楚。下面是我通过wireshark抓取的一个TCP建立握手的过程。（命令行基本上用TCPdump,后面我们还会用这张图说明问题）:</p>
 
 <p><img src="/images/tcp-session-create.jpg" title="tcp-session-create" alt="tcp-session-create" /></p>
 
@@ -259,6 +259,10 @@ off表示关闭
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/07/linux-kernel-load-average-calc/">Linux Kernel Load Average计算分析</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/03/17/processes-share-same-inode-effect/">进程间共享inode相互影响简单分析</a>
